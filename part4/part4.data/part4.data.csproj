@@ -50,15 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\DefaultContenxt.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="DefaultDbcontenxt.cs" />
+    <Compile Include="Entities\Function.cs" />
+    <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\PostComment.cs" />
+    <Compile Include="Entities\PostRate.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\RoleFunctionRelationship.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserRoleRelationship.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
