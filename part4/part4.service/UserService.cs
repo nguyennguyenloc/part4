@@ -1,5 +1,6 @@
 ﻿using part4.core;
 using part4.data.DAL;
+using part4.data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,30 +11,30 @@ namespace part4.service
 {
     public class UserService
     {
-        public bool LoginByCredential(string username, string password)
+        public User LoginByCredential(string username, string password)
         {
             UserDAL userDAL = new UserDAL();
 
             if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(password))
             {
-                return false;
+                return null;
             }
 
             var user = userDAL.GetByUsername(username);
             if (user == null)
             {
-                return false;
+                return null;
             }
 
             var passwordSalt = user.PasswordSalt;
             var passwordEncrypt = PasswordHash.EncryptionPasswordWithSalt(password, passwordSalt);
             if (passwordEncrypt == user.PasswordEncrypted)
             {
-                return true;
+                return user;
             }
             else
             {
-                return false;
+                return null;
             }
 
         }

@@ -29,6 +29,23 @@ namespace part4.data.DAL
 
                 //Set value item with value from model
                 item.Username = model.Username;
+                item.Address = model.Address;
+                item.CreatedBy = model.CreatedBy;
+                item.CreatedTime = model.CreatedTime;
+                item.DateOfBirth = item.DateOfBirth;
+                item.DeletedBy = item.DeletedBy;
+                item.DeletedTime = item.DeletedTime;
+                item.Email = item.Email;
+                item.FirstName = item.FirstName;
+                item.Id = item.Id;
+                item.IsDeleted = item.IsDeleted;
+                item.LastName = item.LastName;
+                item.ModifiedBy = item.ModifiedBy;
+                item.ModifiedTime = item.ModifiedTime;
+                item.PasswordEncrypted = item.PasswordEncrypted;
+                item.PasswordSalt = item.PasswordSalt;
+                item.PhoneNumber = item.PhoneNumber;
+                item.Sex = item.Sex;
 
                 //Save change to database
                 context.SaveChanges();
@@ -49,6 +66,23 @@ namespace part4.data.DAL
 
                 //Set value for item with value from model
                 item.Username = model.Username;
+                item.Address = model.Address;
+                item.CreatedBy = model.CreatedBy;
+                item.CreatedTime = model.CreatedTime;
+                item.DateOfBirth = item.DateOfBirth;
+                item.DeletedBy = item.DeletedBy;
+                item.DeletedTime = item.DeletedTime;
+                item.Email = item.Email;
+                item.FirstName = item.FirstName;
+                item.Id = item.Id;
+                item.IsDeleted = item.IsDeleted;
+                item.LastName = item.LastName;
+                item.ModifiedBy = item.ModifiedBy;
+                item.ModifiedTime = item.ModifiedTime;
+                item.PasswordEncrypted = item.PasswordEncrypted;
+                item.PasswordSalt = item.PasswordSalt;
+                item.PhoneNumber = item.PhoneNumber;
+                item.Sex = item.Sex;
 
                 //Add item to entity
                 context.Users.Add(item);
